@@ -18,6 +18,7 @@ from .errors import (BadRequestError, InvalidTypeForEndpointError,
                      RelationshipNotFoundError, ResourceNotFoundError,
                      ResourceTypeNotFoundError, ToManyExpectedError,
                      ValidationError)
+from ._version import __version__
 
 
 class AttributeActions(Enum):
@@ -140,7 +141,7 @@ class JSONAPIResponse(object):
         self.status_code = 200
         self.data = {
             'jsonapi': {'version': '1.0'},
-            'meta': {'sqlalchemy_jsonapi_version': '4.0.9'}
+            'meta': {'sqlalchemy_jsonapi_version': __version__}
         }
 
 
