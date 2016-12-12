@@ -20,7 +20,7 @@ requirements = ['SQLAlchemy', 'inflection']
 if sys.version_info[0] != 3 or sys.version_info[1] < 4:
       requirements.append('enum34')
 
-from sqlalchemy_jsonapi import __version__
+from sqlalchemy_jsonapi._version import __version__
 
 setup(name='SQLAlchemy-JSONAPI',
       version=__version__,
